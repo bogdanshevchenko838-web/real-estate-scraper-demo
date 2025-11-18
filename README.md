@@ -1,5 +1,19 @@
 # Real Estate Scraper Demo
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python" />
+  <img src="https://img.shields.io/badge/BeautifulSoup4-Parsing-success?style=for-the-badge&logo=html5" />
+  <img src="https://img.shields.io/badge/Requests-HTTP-yellow?style=for-the-badge&logo=curl" />
+  <img src="https://img.shields.io/badge/PostgreSQL-Optional-lightgrey?style=for-the-badge&logo=postgresql" />
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" />
+</p>
+
+<p align="center">
+  <b>Minimal real-estate web scraper using Python</b><br>
+  Normalizes listing data, exports JSON, and optionally stores results in PostgreSQL.
+</p>
+
+---
 A clean, minimal demo project showing how to build a real-estate data extraction pipeline using Python.  
 The goal of this repository is to demonstrate skills in:
 
@@ -13,33 +27,45 @@ The project uses a mock/example page structure, selectors can be easily replaced
 
 ---
 
-## Tech Stack
+## 🧰 Tech Stack
 
-- **Python 3.10+**
-- **requests** — HTTP client  
-- **BeautifulSoup4** — HTML parsing  
-- **psycopg2** — PostgreSQL driver  
-- **python-dotenv** — environment variable loader  
+**Core:**
+- Python 3.10+
+- Requests — HTTP client
+- BeautifulSoup4 — HTML parsing
+- Dataclasses — structured property model
+
+**Storage:**
+- JSON output (default)
+- PostgreSQL (optional)
+
+**Utilities:**
+- python-dotenv — environment loader
+- Logging-friendly print structure 
 
 ---
 
-## 📁 Project Structure
-```
+## 📂 Project Structure
+
 real-estate-scraper-demo/
-│
-├── main.py
+├── main.py # Entrypoint: runs the scraper pipeline
 ├── README.md
 ├── requirements.txt
-├── .gitignore
+├── sample_page.html # Demo HTML page for development
+├── sample_output.json # Generated JSON output
 │
-└── real_estate_scraper/
-├── init.py
-├── config.py # Loads TARGET_URL and PostgreSQL credentials
-├── models.py # Dataclass for Property
-├── scraper.py # HTML downloader + property parser
-├── storage.py # JSON + PostgreSQL storage
-└── utils.py # Helpers (parsing numbers, floats, prices)
-```
+├── real_estate_scraper/
+│ ├── init.py
+│ ├── config.py # Loads TARGET_URL and PostgreSQL credentials
+│ ├── models.py # Dataclass model for Property
+│ ├── scraper.py # HTML downloader + property parser
+│ ├── storage.py # JSON + PostgreSQL saving logic
+│ └── utils.py # Helpers (parsing floats, prices, etc.)
+│
+└── demo.gif # Animated demo (optional)
+
+```md
+
 ## 🧪 Mock HTML Page
 
 This repository includes a small demo HTML page used for parsing development:
