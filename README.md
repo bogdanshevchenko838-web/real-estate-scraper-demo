@@ -24,7 +24,7 @@ The project uses a mock/example page structure — selectors can be easily repla
 ---
 
 ## 📁 Project Structure
-
+```
 real-estate-scraper-demo/
 │
 ├── main.py
@@ -39,8 +39,7 @@ real-estate-scraper-demo/
 ├── scraper.py # HTML downloader + property parser
 ├── storage.py # JSON + PostgreSQL storage
 └── utils.py # Helpers (parsing numbers, floats, prices)
-
-
+```
 ---
 
 ## Quick Start
@@ -75,7 +74,9 @@ PG_PASSWORD=postgres
 If .env is missing, the script gracefully falls back to JSON-only mode.
 ```
 
-Example Output (JSON)
+## 📝 Example Output (JSON)
+
+```json
 [
   {
     "title": "Modern 2BR Apartment Downtown",
