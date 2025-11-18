@@ -33,7 +33,6 @@ source venv/bin/activate   # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 Run scraper and export to JSON
 bash
-Копировать код
 python main.py
 The script will:
 
@@ -49,7 +48,7 @@ Environment variables (optional, for PostgreSQL)
 Create a .env file in the project root:
 
 env
-Копировать код
+
 PG_HOST=localhost
 PG_PORT=5432
 PG_DB=real_estate
@@ -71,4 +70,4 @@ PostgreSQL integration
 Selectors and database schema are easy to adapt for a real client project.
 
 markdown
-Копировать код
+
