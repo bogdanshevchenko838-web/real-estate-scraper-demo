@@ -136,8 +136,8 @@ PG_DB=real_estate
 PG_USER=postgres
 PG_PASSWORD=postgres
 
-If .env is missing, the scraper gracefully falls back to JSON-only mode.
-
+If `.env` is missing, the scraper gracefully falls back to JSON-only mode.
+```
 
 ## Example Output (JSON)
 
