@@ -143,8 +143,8 @@ Open `scraper.py` and replace class names such as:
 ".property-area"
 with selectors that match the real website's structure
 (e.g. .listing, .price-tag, .address-line).
-
 ```
+
 ### 2 Expand the data model (optional)
 
 To capture additional fields:
@@ -171,7 +171,6 @@ a downloaded page,
 or a fetched URL (HTTP request).
 
 Example:
-
 TARGET_URL = "https://somesite.com/rentals"
 
 This structure makes the scraper suitable for:
