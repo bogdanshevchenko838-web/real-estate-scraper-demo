@@ -139,7 +139,7 @@ PG_PASSWORD=postgres
 If `.env` is missing, the scraper gracefully falls back to JSON-only mode.
 
 
-## Example Output (JSON)
+### Example Output (JSON)
 
 ```json
 [
