@@ -106,7 +106,7 @@ it loads the mock HTML file, parses the property listings, and saves the normali
 
 ## 🚀 Quick Start
 
-### 1. Create & activate virtual environment
+## 1. Create & activate virtual environment
 
 ```bash
 python -m venv venv
@@ -114,7 +114,7 @@ source venv/bin/activate   # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 2. Run the scraper
+## 2. Run the scraper
 ```bash
 python main.py
 ```
@@ -125,7 +125,7 @@ The script will:
 - Insert rows into PostgreSQL (if configured)
 
 
-### 3. PostgreSQL Integration (optional)
+## 3. PostgreSQL Integration (optional)
 
 To enable database saving, create a `.env` file in the project root with:
 
@@ -139,7 +139,7 @@ PG_PASSWORD=postgres
 If `.env` is missing, the scraper gracefully falls back to JSON-only mode.
 
 
-### Example Output (JSON)
+## Example Output (JSON)
 
 ```json
 [
@@ -167,7 +167,7 @@ The code is written to be clear, modular, and easy to extend.
 
 This project is intentionally structured so it can be quickly adapted to any real-world website.
 
-### 1. Update HTML selectors
+## 1. Update HTML selectors
 
 Open `scraper.py` and replace class names such as:
 
@@ -183,7 +183,7 @@ with selectors that match the real website's structure
 (e.g. .listing, .price-tag, .address-line).
 ```
 
-### 2. Expand the data model (optional)
+## 2. Expand the data model (optional)
 
 To capture additional fields:
 - modify `Property` dataclass in `models.py`
@@ -191,7 +191,7 @@ To capture additional fields:
 - update database schema in `storage.py` (only if PostgreSQL is used)
 
 
-### 3. Enable PostgreSQL storage (optional)
+## 3. Enable PostgreSQL storage (optional)
 
 Create a `.env` file with:
 
@@ -204,7 +204,7 @@ PG_PASSWORD=postgres
 ```
 When present, the script automatically inserts parsed records into the database.
 
-### 4. Replace the mock HTML with a real page
+## 4. Replace the mock HTML with a real page
 
 Set TARGET_URL in config.py to:
 
