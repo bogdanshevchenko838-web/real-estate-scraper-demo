@@ -70,10 +70,13 @@ It contains a list of `Property` records with fields:
 
 ## 🎥 Demo — Running the Scraper
 
-This short demo shows how the scraper runs in a real environment:  
+This short demo illustrates the scraper running end-to-end:
 it loads the mock HTML file, parses the property listings, and saves the normalized data into `sample_output.json`.
 
-![Scraper Demo](demo.gif)
+<p align="center">
+  <img src="demo.gif" width="700">
+</p>
+
 
 ---
 
