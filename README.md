@@ -40,6 +40,34 @@ real-estate-scraper-demo/
 ├── storage.py # JSON + PostgreSQL storage
 └── utils.py # Helpers (parsing numbers, floats, prices)
 ```
+## 🧪 Mock HTML Page
+
+This repository includes a small demo HTML page used for parsing development:
+
+- File: [`sample_page.html`](./sample_page.html)
+- Contains two `.property-card` blocks with title, price, address, beds/baths, area and link.
+- The scraper in `scraper.py` is written to match this structure 1-to-1.
+
+You can open it in a browser or modify it to simulate different layouts.
+
+---
+
+## 📂 Sample Output File
+
+After running `python main.py`, the normalized data is written to:
+
+- [`sample_output.json`](./sample_output.json)
+
+It contains a list of `Property` records with fields:
+
+- `title`
+- `price_usd`
+- `address`
+- `beds`
+- `baths`
+- `area_sqft`
+- `url`
+
 ---
 
 ## Quick Start
@@ -74,7 +102,7 @@ PG_PASSWORD=postgres
 If .env is missing, the script gracefully falls back to JSON-only mode.
 ```
 
-## 📝 Example Output (JSON)
+## Example Output (JSON)
 
 ```json
 [
@@ -90,9 +118,66 @@ If .env is missing, the script gracefully falls back to JSON-only mode.
 ]
 ```
 
-## 📌 Notes
+## Notes
 ```
 Selectors in scraper.py are placeholders meant to be adapted to real listings.
 Useful as a starting point for real estate aggregation, rent-price analysis, or ETL pipelines.
 The code is written to be clear, modular, and easy to extend.
 ```
+---
+
+## How to Adapt This Scraper to a Real Website
+
+This project is intentionally structured so it can be quickly adapted to any real-world website.
+
+### 1. Update HTML selectors
+Open `scraper.py` and replace class names such as:
+
+```python
+".property-card"
+".property-title"
+".property-price"
+".property-address"
+".property-beds"
+".property-baths"
+".property-area"
+with selectors that match the real website's structure
+(e.g. .listing, .price-tag, .address-line).
+
+2. Expand the data model (optional)
+
+To capture additional fields:
+modify Property dataclass in models.py
+update parsing logic in scraper.py
+update database schema in storage.py (only if PostgreSQL is used)
+
+3. Enable PostgreSQL storage (optional)
+Create a .env file with:
+
+PG_HOST=localhost
+PG_PORT=5432
+PG_DB=real_estate
+PG_USER=postgres
+PG_PASSWORD=postgres
+When present, the script automatically inserts parsed records into the database.
+
+4. Replace the mock HTML with a real page
+Set TARGET_URL in config.py to:
+
+a direct HTML file,
+a downloaded page,
+or a fetched URL (HTTP request).
+
+Example:
+
+TARGET_URL = "https://somesite.com/rentals"
+
+This structure makes the scraper suitable for:
+aggregators,
+price monitoring tools,
+real estate analytics dashboards,
+ETL pipelines,
+and general-purpose web automation tasks.
+
+---
+

@@ -2,14 +2,9 @@ import os
 from dataclasses import dataclass
 from dotenv import load_dotenv
 
-# Load .env file if present
 load_dotenv()
 
-# For demo purposes: example URL.
-TARGET_URL = os.getenv(
-    "TARGET_URL",
-    "https://example.com/real-estate-demo-listings"
-)
+TARGET_URL = os.path.join(os.getcwd(), "sample_page.html")
 
 @dataclass
 class PostgresConfig:
@@ -36,3 +31,4 @@ def get_postgres_config() -> PostgresConfig | None:
         user=user,
         password=password,
     )
+

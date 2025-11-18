@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Modern 2BR Apartment Downtown",
+    "price_usd": 1200,
+    "address": "123 Main St, Sample City",
+    "beds": 2,
+    "baths": 1.5,
+    "area_sqft": 750,
+    "url": "https://example.com/listing/123"
+  },
+  {
+    "title": "Cozy Studio Near Park",
+    "price_usd": 800,
+    "address": "45 Park Ave, Sample City",
+    "beds": 0,
+    "baths": 1.0,
+    "area_sqft": 400,
+    "url": "https://example.com/listing/456"
+  }
+]
