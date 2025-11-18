@@ -128,9 +128,12 @@ The code is written to be clear, modular, and easy to extend.
 
 ## How to Adapt This Scraper to a Real Website
 
+## 🛠️ How to Adapt This Scraper to a Real Website
+
 This project is intentionally structured so it can be quickly adapted to any real-world website.
 
 ### 1. Update HTML selectors
+
 Open `scraper.py` and replace class names such as:
 
 ```python
@@ -143,17 +146,16 @@ Open `scraper.py` and replace class names such as:
 ".property-area"
 with selectors that match the real website's structure
 (e.g. .listing, .price-tag, .address-line).
-```
 
-### 2 Expand the data model (optional)
+2. Expand the data model (optional)
 
 To capture additional fields:
 modify Property dataclass in models.py
 update parsing logic in scraper.py
 update database schema in storage.py (only if PostgreSQL is used)
-```
-```
-### 3. Enable PostgreSQL storage (optional)
+
+3. Enable PostgreSQL storage (optional)
+
 Create a .env file with:
 PG_HOST=localhost
 PG_PORT=5432
@@ -161,9 +163,8 @@ PG_DB=real_estate
 PG_USER=postgres
 PG_PASSWORD=postgres
 When present, the script automatically inserts parsed records into the database.
-```
-```
-### 4. Replace the mock HTML with a real page
+
+4. Replace the mock HTML with a real page
 
 Set TARGET_URL in config.py to:
 a direct HTML file,
@@ -171,12 +172,13 @@ a downloaded page,
 or a fetched URL (HTTP request).
 
 Example:
+
 TARGET_URL = "https://somesite.com/rentals"
 
 This structure makes the scraper suitable for:
-aggregators,
-price monitoring tools,
-real estate analytics dashboards,
-ETL pipelines,
-and general-purpose web automation tasks.
-```
+aggregators
+price monitoring tools
+real estate analytics dashboards
+ETL pipelines
+and general-purpose web automation tasks
+
