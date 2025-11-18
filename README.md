@@ -68,6 +68,13 @@ It contains a list of `Property` records with fields:
 - `area_sqft`
 - `url`
 
+## 🎥 Demo — Running the Scraper
+
+This short demo shows how the scraper runs in a real environment:  
+it loads the mock HTML file, parses the property listings, and saves the normalized data into `sample_output.json`.
+
+![Scraper Demo](demo.gif)
+
 ---
 
 ## Quick Start
