@@ -9,7 +9,7 @@ The goal of this repository is to demonstrate skills in:
 - Optional PostgreSQL integration
 - Clean code structure suitable for production
 
-The project uses a mock/example page structure — selectors can be easily replaced with real client websites.
+The project uses a mock/example page structure, selectors can be easily replaced with real client websites.
 
 ---
 
