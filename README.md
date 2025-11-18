@@ -47,24 +47,22 @@ The project uses a mock/example page structure, selectors can be easily replaced
 
 ## 📂 Project Structure
 
+```text
 real-estate-scraper-demo/
-├── main.py # Entrypoint: runs the scraper pipeline
+├── main.py              # Entrypoint: runs the scraper pipeline
 ├── README.md
 ├── requirements.txt
-├── sample_page.html # Demo HTML page for development
-├── sample_output.json # Generated JSON output
-│
-├── real_estate_scraper/
-│ ├── init.py
-│ ├── config.py # Loads TARGET_URL and PostgreSQL credentials
-│ ├── models.py # Dataclass model for Property
-│ ├── scraper.py # HTML downloader + property parser
-│ ├── storage.py # JSON + PostgreSQL saving logic
-│ └── utils.py # Helpers (parsing floats, prices, etc.)
-│
-└── demo.gif # Animated demo (optional)
-
-```md
+├── sample_page.html     # Demo HTML page for development
+├── sample_output.json   # Generated JSON output
+├── demo.gif             # Animated demo (optional)
+└── real_estate_scraper/
+    ├── __init__.py
+    ├── config.py        # Loads TARGET_URL and PostgreSQL credentials
+    ├── models.py        # Dataclass model for Property
+    ├── scraper.py       # HTML downloader + property parser
+    ├── storage.py       # JSON + PostgreSQL saving logic
+    └── utils.py         # Helpers (parsing numbers, floats, prices)
+```
 
 ## 🧪 Mock HTML Page
 
