@@ -146,13 +146,14 @@ Open `scraper.py` and replace class names such as:
 ".property-area"
 with selectors that match the real website's structure
 (e.g. .listing, .price-tag, .address-line).
-
+```
 2. Expand the data model (optional)
 
 To capture additional fields:
 modify Property dataclass in models.py
 update parsing logic in scraper.py
 update database schema in storage.py (only if PostgreSQL is used)
+
 
 3. Enable PostgreSQL storage (optional)
 
