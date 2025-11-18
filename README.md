@@ -183,7 +183,7 @@ with selectors that match the real website's structure
 (e.g. .listing, .price-tag, .address-line).
 ```
 
-## 2. Expand the data model (optional)
+### 2. Expand the data model (optional)
 
 To capture additional fields:
 - modify `Property` dataclass in `models.py`
@@ -191,7 +191,7 @@ To capture additional fields:
 - update database schema in `storage.py` (only if PostgreSQL is used)
 
 
-## 3. Enable PostgreSQL storage (optional)
+### 3. Enable PostgreSQL storage (optional)
 
 Create a `.env` file with:
 
@@ -204,7 +204,7 @@ PG_PASSWORD=postgres
 ```
 When present, the script automatically inserts parsed records into the database.
 
-## 4. Replace the mock HTML with a real page
+### 4. Replace the mock HTML with a real page
 
 Set TARGET_URL in config.py to:
 
