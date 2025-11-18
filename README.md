@@ -104,7 +104,7 @@ it loads the mock HTML file, parses the property listings, and saves the normali
 
 ---
 
-## Quick Start
+## 🚀 Quick Start
 
 ### 1. Create & activate virtual environment
 
@@ -114,14 +114,14 @@ source venv/bin/activate   # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## 2. Run the scraper
+### 2. Run the scraper
 ```bash
 python main.py
 ```
 The script will:
-- Download HTML from TARGET_URL (located in config.py)
+- Download HTML from `TARGET_URL` (located in `config.py`)
 - Parse property cards into a normalized Python dataclass
-- Save results into sample_output.json
+- Save results into `sample_output.json`
 - Insert rows into PostgreSQL (if configured)
 
 
@@ -139,7 +139,7 @@ PG_PASSWORD=postgres
 If `.env` is missing, the scraper gracefully falls back to JSON-only mode.
 
 
-## Example Output (JSON)
+### Example Output (JSON)
 
 ```json
 [
@@ -155,7 +155,7 @@ If `.env` is missing, the scraper gracefully falls back to JSON-only mode.
 ]
 ```
 
-## Notes
+### Notes
 ```
 Selectors in scraper.py are placeholders meant to be adapted to real listings.
 Useful as a starting point for real estate aggregation, rent-price analysis, or ETL pipelines.
