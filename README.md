@@ -125,17 +125,18 @@ The script will:
 - Insert rows into PostgreSQL (if configured)
 
 
-## 3. PostgreSQL Integration (optional)
+### 3. PostgreSQL Integration (optional)
 
-To enable database saving, create a .env file in the project root:
-```bash
+To enable database saving, create a `.env` file in the project root with:
+
+```env
 PG_HOST=localhost
 PG_PORT=5432
 PG_DB=real_estate
 PG_USER=postgres
 PG_PASSWORD=postgres
-```
-If .env is missing, the script gracefully falls back to JSON-only mode.
+
+If .env is missing, the scraper gracefully falls back to JSON-only mode.
 
 
 ## Example Output (JSON)
