@@ -88,8 +88,11 @@ If .env is missing, the script gracefully falls back to JSON-only mode.
     "url": "https://example.com/listing/123"
   }
 ]
+```
 
-Notes
+## 📌 Notes
+```
 Selectors in scraper.py are placeholders meant to be adapted to real listings.
 Useful as a starting point for real estate aggregation, rent-price analysis, or ETL pipelines.
 The code is written to be clear, modular, and easy to extend.
+```
