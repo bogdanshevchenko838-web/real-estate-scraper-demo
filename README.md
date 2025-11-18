@@ -117,24 +117,26 @@ pip install -r requirements.txt
 ## 2. Run the scraper
 ```bash
 python main.py
-
+```
 The script will:
 - Download HTML from TARGET_URL (located in config.py)
 - Parse property cards into a normalized Python dataclass
 - Save results into sample_output.json
 - Insert rows into PostgreSQL (if configured)
-```
+
 
 ## 3. PostgreSQL Integration (optional)
-```bash
+
 To enable database saving, create a .env file in the project root:
+```bash
 PG_HOST=localhost
 PG_PORT=5432
 PG_DB=real_estate
 PG_USER=postgres
 PG_PASSWORD=postgres
-If .env is missing, the script gracefully falls back to JSON-only mode.
 ```
+If .env is missing, the script gracefully falls back to JSON-only mode.
+
 
 ## Example Output (JSON)
 
