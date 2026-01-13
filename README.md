@@ -119,7 +119,7 @@ pip install -r requirements.txt
 python main.py
 ```
 The script will:
-- Download HTML from `TARGET_URL` (located in `config.py`)
+- Load HTML from `TARGET_URL` (located in `config.py`), using a local file path or an HTTP(S) URL
 - Parse property cards into a normalized Python dataclass
 - Save results into `sample_output.json`
 - Insert rows into PostgreSQL (if configured)
@@ -206,11 +206,11 @@ When present, the script automatically inserts parsed records into the database.
 
 ## 4. Replace the mock HTML with a real page
 
-Set TARGET_URL in config.py to:
+Set TARGET_URL in config.py to either:
 
-- a direct HTML file,
-- a downloaded page,
-- or a fetched URL (HTTP request).
+- a direct HTML file path,
+- a downloaded page on disk,
+- or an HTTP(S) URL.
 
 Example:
 ```python
@@ -222,4 +222,3 @@ This structure makes the scraper suitable for:
 - real estate analytics dashboards
 - ETL pipelines
 - and general-purpose web automation tasks
-

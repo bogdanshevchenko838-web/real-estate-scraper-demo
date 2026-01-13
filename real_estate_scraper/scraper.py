@@ -1,6 +1,7 @@
 import os
 from typing import List
 
+import requests
 from bs4 import BeautifulSoup
 
 from .models import Property
@@ -9,9 +10,14 @@ from .utils import parse_int, parse_float, parse_price_usd
 
 def fetch_html(path: str) -> str:
     """
-    Load local HTML file and return its content.
-    For this demo, we always work with a local file (sample_page.html).
+    Load HTML from a local file or fetch from a URL and return its content.
+    URLs must start with http:// or https://.
     """
+    if path.startswith(("http://", "https://")):
+        response = requests.get(path, timeout=30)
+        response.raise_for_status()
+        return response.text
+
     if not os.path.exists(path):
         raise FileNotFoundError(f"HTML file not found: {path}")
 
